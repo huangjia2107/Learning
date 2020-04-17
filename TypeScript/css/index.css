@@ -1,0 +1,9 @@
+/*dddd*/
+
+p {
+    color: Black;
+    width: 100px;
+    height: 100px;
+
+    background: repeating-radial-gradient(center,purple 0px,gold 0px);
+}
