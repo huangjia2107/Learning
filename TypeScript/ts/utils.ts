@@ -62,4 +62,18 @@ var EventUtil = {
             event.cancelBubble = true;
         }
     },
+
+    /*
+    getClipboardText: function (event) {
+        let data = event.clipboardData || window.clipboardData;
+        return data.getdata("text");
+    },
+
+    setClipboardText: function (event, value) {
+        if (event.clipboardData) {
+            return event.clipboardData.setData("text/plain", value);
+        } else if (window.clipboardData) {
+            return window, clipboardData.setData("text", value);
+        }
+    },*/
 };

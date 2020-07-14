@@ -1,5 +1,10 @@
-let p = Promise.resolve(8);
-
-let p1 = p.then((value) => Error("fff"));
-p1.then((value) => console.log(value, p1));
-p1.catch((r) => console.log(r));
+/*
+fetch(
+    "https://api.github.com/repos/huangjia2107/xamlviewer/releases/latest"
+).then(
+    (r) => {
+        console.log(r.status);
+        console.log(r.statusText);
+    },
+    (err) => console.log(err)
+);*/
