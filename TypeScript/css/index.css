@@ -165,23 +165,19 @@ a:active {
     display: grid;
     grid: repeat(3, 80px) / repeat(6, 1fr);
     gap: 1px 1px;
-    border-color: lightgreen;
     margin-top: 40px;
+    font-size: 22px;
 }
 
-.nav-item {
-    background-color: gray;
+#nav > div {
     cursor: pointer;
-    display: flex;
-}
-
-.nav-item-child {
-    display: flex;
-    color: white;
-    justify-items: center;
-    align-items: center;
-}
-
-#window {
     background-color: #0078d7;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#nav img + p {
+    margin-left: 5px;
 }
