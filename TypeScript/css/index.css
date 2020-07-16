@@ -1,12 +1,11 @@
-/*dddd*/
-
 body {
     margin: 0px;
     font-family: Segoe UI, SegoeUI, Helvetica Neue, Helvetica, Arial, sans-serif;
     font-weight: 400;
 }
 
-h1 {
+h1,
+h2 {
     font-weight: 600;
     font-size: 40px;
 }
@@ -157,7 +156,8 @@ a:active {
     outline: none;
 }
 
-#section {
+#section,
+#docSection {
     margin: 0 80px;
 }
 
@@ -171,13 +171,42 @@ a:active {
 
 #nav > div {
     cursor: pointer;
-    background-color: #0078d7;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-#nav img + p {
-    margin-left: 5px;
+#docSection h2 {
+    font-size: 30px;
+    color: #171717;
+}
+
+#docSection > div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#docSection li {
+    list-style-type: none;
+    margin-left: -35px;
+    font-size: 18px;
+    color: #0051ab;
+    cursor: pointer;
+}
+
+#docSection li + li {
+    margin-top: 12px;
+}
+
+#docSection a::before {
+    content: " ";
+    margin: 10px 10px 10px 0px;
+    border: 3px solid lightgray;
+}
+
+#docSection li:hover a {
+    text-decoration-line: underline;
+}
+
+#docSection li:hover a::before {
+    content: " ";
+    margin-right: 10px;
+    border: 3px solid #0051ab;
 }
