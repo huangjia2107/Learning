@@ -1,0 +1,93 @@
+:root {
+    --success-color: #2ecc71;
+    --error-color: #e74c3c;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 0;
+}
+
+#container {
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    width: 400px;
+}
+
+form {
+    color: darkgrey;
+}
+
+form > .form-control:not(:first-of-type) {
+    margin-top: 10px;
+}
+
+.form-control {
+    position: relative;
+    display: block;
+    padding-bottom: 20px;
+}
+
+label {
+    display: block;
+}
+
+input {
+    margin-top: 5px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    border: 2px solid #f0f0f0;
+    outline: none;
+    display: block;
+}
+
+input:focus {
+    border-color: slategray;
+}
+
+input[class="error"] {
+    border-color: var(--error-color);
+}
+
+input[class="success"] {
+    border-color: var(--success-color);
+}
+
+small {
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: var(--error-color);
+}
+
+small[class="error"] {
+    visibility: visible;
+}
+
+button {
+    margin-top: 10px;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    color: white;
+    background-color: #3498db;
+    border: 1px solid #3498db;
+    border-radius: 4px;
+    cursor: pointer;
+}
