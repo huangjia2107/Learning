@@ -1,0 +1,63 @@
+:root {
+    --seat-na-color: #444451;
+    --seat-selected-color: #6feaf6;
+    --seat-occupied-color: #ffffff;
+}
+
+body {
+    margin: 0;
+    background-color: #242333;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+select {
+    height: 27px;
+    width: 200px;
+    border-radius: 5px;
+    padding-left: 10px;
+    margin-left: 10px;
+}
+
+#mark {
+    list-style-type: none;
+    background-color: #201f2e;
+    color: #777;
+    padding: 5px, 10px, 5px, 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#mark li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.seatRow {
+    display: flex;
+}
+
+.seat {
+    width: 16px;
+    height: 12px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-color: var(--seat-na-color);
+}
+
+.naSeat {
+    background-color: var(--seat-na-color);
+}
+
+.selectedSeat {
+    background-color: var(--seat-selected-color);
+}
+
+.occupiedSeat {
+    background-color: var(--seat-occupied-color);
+}
