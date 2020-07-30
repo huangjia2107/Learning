@@ -76,10 +76,6 @@ select {
     margin-right: 15px;
 }
 
-.naSeat {
-    background-color: var(--seat-color);
-}
-
 .selected {
     background-color: var(--seat-selected-color);
 }
