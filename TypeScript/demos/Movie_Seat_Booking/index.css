@@ -1,5 +1,5 @@
 :root {
-    --seat-na-color: #444451;
+    --seat-color: #444451;
     --seat-selected-color: #6feaf6;
     --seat-occupied-color: #ffffff;
 }
@@ -41,30 +41,64 @@ select {
     margin: 0 10px;
 }
 
-#mark li small {
-    margin-left: 2px;
+#mark small {
+    margin-left: 5px;
+}
+
+#main {
+    perspective: 1000px;
+}
+
+#screen {
+    background-color: white;
+    height: 70px;
+    width: 100%;
+    margin-bottom: 15px;
+    transform: rotateX(-45deg);
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
 }
 
 .seatRow {
     display: flex;
+    margin-top: 5px;
 }
 
 .seat {
     width: 16px;
     height: 12px;
+    margin: 3px;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
-    background-color: var(--seat-na-color);
+    background-color: var(--seat-color);
+}
+
+.seat:nth-child(4n + 2) {
+    margin-right: 15px;
 }
 
 .naSeat {
-    background-color: var(--seat-na-color);
+    background-color: var(--seat-color);
 }
 
-.selectedSeat {
+.selected {
     background-color: var(--seat-selected-color);
 }
 
-.occupiedSeat {
+.occupied {
     background-color: var(--seat-occupied-color);
+}
+
+#main .seat:not(.occupied):hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+#text{
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+#text span{
+    color: #6feaf6;
+    font-weight: Bold;
 }

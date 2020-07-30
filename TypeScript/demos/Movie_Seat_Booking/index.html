@@ -7,24 +7,24 @@
     <body>
         <div id="movie">
             <label>Pick a movie:</label>
-            <select>
-                <option>AAAAA($10)</option>
-                <option>BBBBB($20)</option>
-                <option>CCCCC($30)</option>
+            <select id="moveSelect">
+                <option value="10">AAAAA($10)</option>
+                <option value="20">BBBBB($20)</option>
+                <option value="30">CCCCC($30)</option>
             </select>
         </div>
 
         <ul id="mark">
             <li>
-                <div class="seat naSeat"></div>
+                <div class="seat"></div>
                 <small>N/A</small>
             </li>
             <li>
-                <div class="seat selectedSeat"></div>
+                <div class="seat selected"></div>
                 <small>Selected</small>
             </li>
             <li>
-                <div class="seat occupiedSeat"></div>
+                <div class="seat occupied"></div>
                 <small>Occupied</small>
             </li>
         </ul>
@@ -47,8 +47,28 @@
                 <div class="seat"></div>
                 <div class="seat"></div>
                 <div class="seat"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
                 <div class="seat"></div>
                 <div class="seat"></div>
+                <div class="seat"></div>
+            </div>
+            <div class="seatRow">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+            </div>
+            <div class="seatRow">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
                 <div class="seat"></div>
                 <div class="seat"></div>
                 <div class="seat"></div>
@@ -68,34 +88,17 @@
                 <div class="seat"></div>
                 <div class="seat"></div>
                 <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-            </div>
-            <div class="seatRow">
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-            </div>
-            <div class="seatRow">
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
                 <div class="seat"></div>
             </div>
         </div>
 
-        <p id="text"></p>
+        <p id="text">
+            You have selected <span id="count">0</span> seats for a price of
+            $<span id="price">0</span>
+        </p>
 
         <!--script-->
         <script src="index.js"></script>
