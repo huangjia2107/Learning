@@ -4,12 +4,27 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "type": "typescript",
-            "tsconfig": "tsconfig.json",
-            "option": "watch",
+            "group": "build",
+            "type": "deno",
+            "dependsOn":[
+              "build-createjsfolder"
+            ],
+            "dependsOrder": "sequence",
+            "command": "bundle",
+            "args": [
+              "${workspaceFolder}/ts/index.ts",
+              "${workspaceFolder}/out/ts/index.js"
+            ],
             "problemMatcher": [
-                "$tsc-watch"
+              "$deno"
             ]
-        }
+        },
+        {
+          "label": "build-createjsfolder",
+          "type":"shell",
+          "command":"if(!(Test-Path ${workspaceFolder}/out/ts)){ New-Item -itemType Directory -Path ${workspaceFolder}/out/ts }",
+          "args": [],
+          "problemMatcher":[]
+       }
     ]
 }
